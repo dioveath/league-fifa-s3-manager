@@ -1,4 +1,12 @@
-import { app, analytics, db, initializeApp, getAnalytics, getFirestore, collection, doc, getDocs, setDoc, deleteDoc} from './credentials.js';
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics.js";
+import { getFirestore, collection, doc, getDoc, getDocs, setDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+import { firebaseConfig } from './credentials.js';
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+const db = getFirestore(app);
 
 
 async function getLeagues(){
@@ -22,6 +30,28 @@ async function getLeagues(){
   return leagueList;
 }
 
+async function getLeague(leagueTitle){
+  const docRef = doc(db, "leagues", leagueTitle);
+  const docSnap = await getDoc(docRef);
+
+  if(docSnap.exists()) {
+    var league =  docSnap.data();
+
+    var fixturesSaved = league.fixtures;
+    var arrayFixtures = [];
+    for(var fixtureProp in fixturesSaved) {
+      arrayFixtures.push(league.fixtures[fixtureProp]);
+    }
+
+    league.fixtures = arrayFixtures;
+    return league;
+  } else {
+    console.log(`No League with title: ${leagueTitle}`);
+    return undefined;
+  }
+  
+}
+
 async function addLeague(league){
   var fixtureSavable = {}; 
   for(var i = 0; i < league.fixtures.length; i++){
@@ -41,4 +71,4 @@ async function removeLeague(leagueTitle){
 }
 
 
-export { getLeagues, addLeague, removeLeague };
+export { getLeagues, getLeague, addLeague, removeLeague };

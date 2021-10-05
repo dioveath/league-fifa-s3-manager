@@ -52,8 +52,9 @@ function computeFixtures(players, weeks){
         break;
     }
   }
-
 }
+
+
 
 
 function shuffle(array){
