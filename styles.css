@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: white;
+    color: black;
+}
+
+
+#playerMatches {
+    display: flex;
+    flex-wrap: wrap;
+}

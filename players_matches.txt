@@ -1,0 +1,17 @@
+
+
+- jayraj
+- nugkha
+- uJackal
+- prison
+- void
+- subba
+
+
+
+jayraj 1 - 2 nugkha
+uJackal 2 - 4 prison
+prison 2 - 3 void
+void 3 - 2 nugkha
+jayraj 4 - 2 uJackal
+ 

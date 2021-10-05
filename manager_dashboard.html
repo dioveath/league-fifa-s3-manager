@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Manager Dashboard </title>
+
+    <script src="league.js"></script>
+    <!-- <script src="firebase.js" type="module"></script> -->
+    <script src="manager.js" type="module"></script>
+</head>
+<body>
+
+  <h1>Manager Dashboard</h1>
+
+  <form action="" id="leagueForm" style="display: none;">
+    League Title: <input name="" type="text" value="" id="leagueTitle"/> <br/>
+    League Description: <input name="" type="text" value="" id="leagueDesc"/> <br/>
+    Total Fixtures: <input name="" type="number" value="" id="totalFixtures" max="8" min="2"/> <br/>
+    Total Players: <input name="" type="number" value="" id="totalPlayers" max="20" min="2"/> <br/>
+    <br id="endOfFields"/>
+    <input name="" type="submit" value="Create League" id="createLeagueButton"/>
+  </form>
+
+  <div id="allLeagues">
+  </div>
+  
+
+</body>
+</html>
