@@ -15,18 +15,17 @@ body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
  
-body::-webkit-scrollbar-thumb {
+body::-moz-scrollbar-thumb {
   background-color: #B71B1B;
   outline: 1px solid darkgrey;
 }
-
 
 body {
     background-color: #B71B1B;
     background: radial-gradient(#1D0207, #0D0000);    
     color: white;
     font-family: 'Montserrat', 'Noto Sans Display', sans-serif;
-    margin: 40px 100px;
+    /* margin: 40px 100px; */
     text-align: center;
 }
 
@@ -38,12 +37,7 @@ body {
     margin-bottom: 100px;
 }
 
-#fixturesUI {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
-    margin-top: 50px;
-}
+
 
 table {
     border-collapse: collapse;
@@ -69,6 +63,65 @@ td {
 }
 
 tr:nth-child(even){
-    background-color: #c40021DD;
+    background-color: #F40B41;
     color: white;
+}
+
+
+#fixturesUI {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+
+.fixture-title {
+    background: #F40B41;
+    padding: 1rem 0rem;
+    margin: 1rem 0rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+
+    border-radius: 4px;
+}
+
+
+.fixture-div {
+    /* margin: 1rem 0rem; */
+}
+
+
+.fixture-table {
+    /* min-width: 300px; */
+}
+
+
+.logo-container {
+    margin: 0.1rem 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    /* background-color: #c40021DD; */
+    padding: 0.2rem 0rem;
+
+
+}
+
+.navbar h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+
+.generic-title {
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-size: 2rem;
+    font-weight: 900;
 }

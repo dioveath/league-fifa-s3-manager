@@ -22,10 +22,20 @@ window.onload = () => {
   }
 
   function ShowFixtureTable(fixture, fixtureTitle="Fixture"){
+    var tableHolderDiv = document.createElement("div");
+    tableHolderDiv.classList.add("fixture-div");
+
     var table = document.createElement('table');
+    table.classList.add("fixture-table");
+
+    var title = document.createElement("h2");
+    title.classList.add("fixture-title");
+    title.innerHTML = fixtureTitle;
+
+    tableHolderDiv.appendChild(title);
+    tableHolderDiv.appendChild(table);
 
     var tableRow = document.createElement("tr");
-
     var homeHead = document.createElement("th");
     var awayHead = document.createElement("th");
 
@@ -60,7 +70,7 @@ window.onload = () => {
 
     }
 
-    fixturesUI.appendChild(table);
+    fixturesUI.appendChild(tableHolderDiv);
   } 
 
 
