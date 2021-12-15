@@ -1,4 +1,5 @@
 import { getLeagues, getLeague, addLeague, removeLeague} from './firebase.js';
+import { getLeagueTableStats } from './league.js';
 
 window.onload = () => {
 

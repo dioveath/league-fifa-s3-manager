@@ -1,4 +1,5 @@
 import { getLeagues, addLeague, removeLeague} from './firebase.js';
+import { createLeague, createFixtures, createMatches } from './league.js';
 
 window.onload = () => {
 

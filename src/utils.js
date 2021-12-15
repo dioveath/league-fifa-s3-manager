@@ -66,3 +66,5 @@ function shuffle(array){
   }
   return array;
 }
+
+export { computeMatches, computeFixtures };

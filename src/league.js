@@ -170,9 +170,10 @@ function fact(n){
 
 
 
-  // function test(){
-  //   console.log(createLeague("FIFA S3", "Charicha League Fifa S3", DEBUG_PLAYERS, 4));
-  // }
 
-  // test();
+// function test(){
+//   console.log(createLeague("FIFA S3", "Charicha League Fifa S3", DEBUG_PLAYERS, 4));
+// }
+// test();
 
+export { createLeague, createFixtures, createMatches, getLeagueTableStats};
